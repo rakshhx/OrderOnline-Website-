@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizzle N Savor | Receipt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="classa">
+        <img src="logo.png" alt="Sizzle n Savor">
+        <div class="class1">
+           <a href="index.html">Home</a>
+           <a href="about.html">About</a>
+           <a href="https://sizzlensavor.blogspot.com/" target="_blank">Blogs</a>
+           <a href="menu.html">Menu</a>
+           <a href="order.html">Order</a>
+           <a href="contact.html">Contact</a>
+           <a href="location.html">Location</a>
+           <a href="review.html">Review</a>
+        </div>
+    </div>
+
+    <div class="section-box">
+        <div class="box8">
+            <div class="container">
+                <header>
+                    <h1>Payment Successful! 🎉</h1>
+                </header>
+
+                <!-- Receipt Section -->
+                <section class="receipt">
+                    <p><strong>Thank you for dining with us!</strong> We hope you enjoy your meal. 🍽️</p>
+                    <button onclick="goHome()">Return to Home</button>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to Load Receipt -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cart = JSON.parse(localStorage.getItem('cart'));
+            let receiptContent = document.getElementById('receipt-content');
+            let total = 0;
+
+            if (cart && cart.length > 0) {
+                let receiptHTML = '<ul>';
+                cart.forEach((item) => {
+                    receiptHTML += `<li>${item.item} x ${item.quantity} - ₹${item.totalPrice}</li>`;
+                    total += item.totalPrice;
+                });
+                receiptHTML += `</ul><p><strong>Total Amount Paid:</strong> ₹${total}</p>`;
+                receiptContent.innerHTML = receiptHTML;
+                localStorage.removeItem('cart'); // Clear the cart after payment
+            } else {
+                receiptContent.innerHTML = '<p>Your cart is empty!</p>';
+            }
+        });
+
+        function goHome() {
+            window.location.href = 'index.html';
+        }
+    </script>
+
+    <!-- Copyrights -->
+    <div class="box4">
+        <img src="logo.png" alt="logo"><br>
+        <p>Every Bite Ignites a Flavorful Journey!</p>
+        <br>
+        <div class="icon-flex">
+           <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+           <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+           <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+           <a href="https://www.x.com/" target="_blank"><i class="fa-solid fa-x"></i></a>
+           <a href="https://www.gmail.com/" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+           <i class="fa-solid fa-phone"></i>
+        </div>
+        <hr>
+        <div class="box4-link">
+           <a href="index.html">Home</a>
+           <a href="order.html">Order Now</a>
+           <a href="privacy.html">Privacy Policy</a>
+           <a href="terms.html">Terms & Conditions</a>
+        </div>
+        <hr>
+        © 2025 Sizzle N Savor. All Rights Reserved.
+    </div>
+</body>
+</html>

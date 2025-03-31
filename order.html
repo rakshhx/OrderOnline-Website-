@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizzle N Savor | Order Now</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!--Navigation Bar-->
+    <div class="classa">
+        <img src="logo.png" alt="Sizzle n Savor">
+        <div class="class1">
+           <a href="index.html">Home</a>
+           <a href="about.html">About</a>
+           <a href="https://sizzlensavor.blogspot.com/" target="_blank">Blogs</a>
+           <a href="menu.html">Menu</a>
+           <a href="order.html">Order</a>
+           <a href="contact.html">Contact</a>
+           <a href="location.html">Location</a>
+           <a href="review.html">Review</a>
+        </div>
+    </div>
+
+    <div class="section-box">
+    <div class="box8">
+    <div class="container">
+        <header>
+            <h1>Order Now</h1>
+        </header>
+
+        <section class="menu">
+            <!-- Starters Section -->
+            <h2>Starters - The Perfect Beginning</h2>
+            <div class="items">
+                <div class="item">
+                    <h3>Volcanic Lava Wings</h3>
+                    <p>Fiery glazed chicken wings served with a cooling yogurt dip.</p>
+                    <span>₹320</span>
+                    <input type="number" id="qty1" min="1" value="1">
+                    <button onclick="addToCart('Volcanic Lava Wings', 320, 'qty1')">Add to Order</button>
+                </div>
+                <div class="item">
+                    <h3>Tandoori Ember Bites</h3>
+                    <p>Charred paneer cubes marinated in a smoky spice blend.</p>
+                    <span>₹280</span>
+                    <input type="number" id="qty2" min="1" value="1">
+                    <button onclick="addToCart('Tandoori Ember Bites', 280, 'qty2')">Add to Order</button>
+                </div>
+                <div class="item">
+                    <h3>Garlic Truffle Toast</h3>
+                    <p>Crisp artisan bread infused with roasted garlic and white truffle oil.</p>
+                    <span>₹180</span>
+                    <input type="number" id="qty3" min="1" value="1">
+                    <button onclick="addToCart('Garlic Truffle Toast', 180, 'qty3')">Add to Order</button>
+                </div>
+                <div class="item">
+                    <h3>Soulful Tomato Essence</h3>
+                    <p>Slow-simmered heirloom tomato soup with parmesan crisps.</p>
+                    <span>₹160</span>
+                    <input type="number" id="qty4" min="1" value="1">
+                    <button onclick="addToCart('Soulful Tomato Essence', 160, 'qty4')">Add to Order</button>
+                </div>
+            </div>
+
+            <!-- Mains Section -->
+            <h2>Sizzling Mains – A Flavor Explosion</h2>
+            <div class="items">
+                <div class="item">
+                    <h3>Midnight Firewood Pizza</h3>
+                    <p>Hand-stretched sourdough with a hint of smoked chili oil.</p>
+                    <span>₹450</span>
+                    <input type="number" id="qty5" min="1" value="1">
+                    <button onclick="addToCart('Midnight Firewood Pizza', 450, 'qty5')">Add to Order</button>
+                </div>
+                <div class="item">
+                    <h3>Velvet Alfredo Dream</h3>
+                    <p>Creamy fettuccine infused with aged parmesan & sun-dried tomatoes.</p>
+                    <span>₹400</span>
+                    <input type="number" id="qty6" min="1" value="1">
+                    <button onclick="addToCart('Velvet Alfredo Dream', 400, 'qty6')">Add to Order</button>
+                </div>
+                <div class="item">
+                    <h3>Scarlet Fury Arrabbiata</h3>
+                    <p>Fiery red sauce pasta with roasted garlic and tender chicken strips.</p>
+                    <span>₹420</span>
+                    <input type="number" id="qty7" min="1" value="1">
+                    <button onclick="addToCart('Scarlet Fury Arrabbiata', 420, 'qty7')">Add to Order</button>
+                </div>
+            </div>
+
+            <!-- Indian Legends Section -->
+            <h2>Indian Legends – Timeless Indulgence</h2>
+            <div class="items">
+                <div class="item">
+                    <h3>Royal Butter Infusion (Chicken/Panner)</h3>
+                    <p>A rich, buttery delight slow-cooked with secret Mughlai spices.</p>
+                    <span>₹480/₹420</span>
+                    <input type="number" id="qty8" min="1" value="1">
+                    <button onclick="addToCart('Royal Butter Infusion', 480, 'qty8')">Add to Order</button>
+                </div>
+                <div class="item">
+                    <h3>Maharaja Dum Biryani</h3>
+                    <p>Aromatic saffron-infused basmati rice layered with spiced meat or veggies.</p>
+                    <span>₹460</span>
+                    <input type="number" id="qty9" min="1" value="1">
+                    <button onclick="addToCart('Maharaja Dum Biryani', 460, 'qty9')">Add to Order</button>
+                </div>
+                <div class="item">
+                    <h3>Smoky Tandoori Platter</h3>
+                    <p>A medley of chargrilled meats & paneer, served with mint chutney.</p>
+                    <span>₹520</span>
+                    <input type="number" id="qty10" min="1" value="1">
+                    <button onclick="addToCart('Smoky Tandoori Platter', 520, 'qty10')">Add to Order</button>
+                </div>
+            </div>
+
+            <!-- Continental Sensations Section -->
+            <h2>Continental Sensations</h2>
+            <div class="items">
+                <div class="item">
+                    <h3>Ember-Grilled Steakhouse Chicken</h3>
+                    <p>Flame-grilled chicken breast drizzled with a rich peppercorn glaze.</p>
+                    <span>₹550</span>
+                    <input type="number" id="qty11" min="1" value="1">
+                    <button onclick="addToCart('Ember-Grilled Steakhouse Chicken', 550, 'qty11')">Add to Order</button>
+                </div>
+                <div class="item">
+                    <h3>Deep Blue Ocean (Fish & Chips)</h3>
+                    <p>Crispy beer-battered fish, golden fries & house tartar sauce.</p>
+                    <span>₹480</span>
+                    <input type="number" id="qty12" min="1" value="1">
+                    <button onclick="addToCart('Deep Blue Ocean', 480, 'qty12')">Add to Order</button>
+                </div>
+            </div>
+
+            <!-- Desserts Section -->
+            <h2>Sweet Sizzle – Divine Finishes</h2>
+            <div class="items">
+                <div class="item">
+                    <h3>Molten Lava Obsession</h3>
+                    <p>Decadent chocolate lava cake with a vanilla bean ice cream scoop.</p>
+                    <span>₹280</span>
+                    <input type="number" id="qty13" min="1" value="1">
+                    <button onclick="addToCart('Molten Lava Obsession', 280, 'qty13')">Add to Order</button>
+                </div>
+                <div class="item">
+                    <h3>Cloud Nine Cheesecake</h3>
+                    <p>Velvety smooth cheesecake with a touch of citrus zest.</p>
+                    <span>₹300</span>
+                    <input type="number" id="qty14" min="1" value="1">
+                    <button onclick="addToCart('Cloud Nine Cheesecake', 300, 'qty14')">Add to Order</button>
+                </div>
+                <div class="item">
+                    <h3>Golden Elixir Gulab Jamun</h3>
+                    <p>Warm saffron-infused dumplings drizzled with rose syrup.</p>
+                    <span>₹160</span>
+                    <input type="number" id="qty15" min="1" value="1">
+                    <button onclick="addToCart('Golden Elixir Gulab Jamun', 160, 'qty15')">Add to Order</button>
+                </div>
+            </div>
+
+            <!-- Beverages Section -->
+            <h2>Signature Elixirs – Crafted Beverages</h2>
+            <div class="items">
+                <div class="item">
+                    <h3>Mystic Cold Brew</h3>
+                    <p>Smooth handcrafted coffee, infused with a hint of caramel.</p>
+                    <span>₹200</span>
+                    <input type="number" id="qty16" min="1" value="1">
+                    <button onclick="addToCart('Mystic Cold Brew', 200, 'qty16')">Add to Order</button>
+                </div>
+                <div class="item">
+                    <h3>Neon Sunset (Mocktail)</h3>
+                    <p>A vibrant blend of passionfruit, orange, and a secret fizz twist.</p>
+                    <span>₹220</span>
+                    <input type="number" id="qty17" min="1" value="1">
+                    <button onclick="addToCart('Neon Sunset', 220, 'qty17')">Add to Order</button>
+                </div>
+                <div class="item">
+                    <h3>Tropical Silk Smoothie</h3>
+                    <p>Creamy mango & coconut delight with a hint of vanilla essence.</p>
+                    <span>₹250</span>
+                    <input type="number" id="qty18" min="1" value="1">
+                    <button onclick="addToCart('Tropical Silk Smoothie', 250, 'qty18')">Add to Order</button>
+                </div>
+            </div>
+
+<!-- Seasonal Section -->
+<h2>Seasonal Delights - Mangoistic</h2>
+<div class="items">
+    <div class="item">
+        <h3>Mango Pudding</h3>
+        <p>A creamy, tropical delight bursting with fresh mango goodness.</p>
+        <span>₹300</span>
+        <input type="number" id="qty19" min="1" value="1">
+        <button onclick="addToCart('Mango Pudding', 300, 'qty19')">Add to Order</button>
+    </div>
+    <div class="item">
+        <h3>Mango Cheesecake</h3>
+        <p>Silky smooth cheesecake infused with luscious mango flavor.</p>
+        <span>₹430</span>
+        <input type="number" id="qty20" min="1" value="1">
+        <button onclick="addToCart('Mango CHeesecake', 430, 'qty20')">Add to Order</button>
+    </div>
+    <div class="item">
+        <h3>Mango Muffins</h3>
+        <p>Soft, fluffy treats with a hint of sweetness in every bite.</p>
+        <span>₹350</span>
+        <input type="number" id="qty21" min="1" value="1">
+        <button onclick="addToCart('Mango Muffins', 350, 'qty21')">Add to Order</button>
+    </div>
+</div>
+
+        </section>
+
+        <!-- Cart Section -->
+        <div id="cart" class="box8">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: ₹<span id="total">0</span></p>
+            <button id="checkoutBtn" onclick="redirectToPayment()">Proceed to Checkout</button>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    let cart = [];
+
+    function addToCart(item, price, qtyId) {
+        let quantity = parseInt(document.getElementById(qtyId).value);
+        let totalPrice = price * quantity;
+        cart.push({ item, price, quantity, totalPrice });
+        updateCart();
+    }
+
+    function updateCart() {
+        let cartItems = document.getElementById('cart-items');
+        cartItems.innerHTML = '';
+        let total = 0;
+        cart.forEach((product, index) => {
+            cartItems.innerHTML += `<li>${product.item} x ${product.quantity} - ₹${product.totalPrice} <button onclick="removeItem(${index})">Remove</button></li>`;
+            total += product.totalPrice;
+        });
+        document.getElementById('total').innerText = total;
+    }
+
+    function removeItem(index) {
+        cart.splice(index, 1);
+        updateCart();
+    }
+
+    function redirectToPayment() {
+        if (cart.length === 0) {
+            alert('Your cart is empty!');
+            return;
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        window.location.href = 'payment.html';
+    }
+</script>
+
+<!-- Copyrights -->
+<div class="box4">
+    <img src="logo.png" alt="logo"><br>
+    <p>Every Bite Ignites a Flavorful Journey!</p>
+    <br>
+    <div class="icon-flex">
+       <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+       <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+       <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+       <a href="https://www.x.com/" target="_blank"><i class="fa-solid fa-x"></i></a>
+       <a href="https://www.gmail.com/" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+       <i class="fa-solid fa-phone"></i>
+    </div>
+    <hr>
+    <div class="box4-link">
+       <a href="index.html">Home</a>
+       <a href="order.html">Order Now</a>
+       <a href="privacy.html">Privacy Policy</a>
+       <a href="terms.html">Terms & Conditions</a>
+    </div>
+    <hr>
+    © 2025 Sizzle N Savor. All Rights Reserved.
+ </div>
+</body>
+</html>
